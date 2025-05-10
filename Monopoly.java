@@ -1,1 +1,41 @@
-// comment
+public class Monopoly{
+    public static void main(String [] args) {
+        System.out.println("hi");
+
+        Property mediterraneanAvenue = new Property("Mediterranean Avenue", 60, 2, 1, 4, 10, 30, 90, 160, 250); 
+       // Property mediterraneanAvenue = new Property("Mediterranean Avenue", 60, ArrayList<Integer> rents = new ArrayList<Integer>());
+       // Property balticAvenue = new Property("Baltic Avenue", 60, 4, 20, 60, 180, 320, 450);
+       // Property readingRailroad = new Railroad("Reading Railroad", 200); 
+        /*Property pennsylvaniaRailroad = new Railroad("Pennsylvania Railroad", 200);
+        Property bnoRailroad = new Railroad("B&O Railroad", 200);
+        Property shortLineRailroad = new Railroad("Short Line Railroad", 200);
+        Property electricCompany = new Utility("Electric Company", 150);
+        Property waterWorks = new Utility("Water Works", 150);
+        Property vermontAvenue = new Property("Vermont Avenue", 100, 6, 30, 90, 270, 400, 550);
+        Property connecticutAvenue = new Property("Connecticut Avenue", 120, 6, 30, 90, 270, 400, 550);
+        Property stCharlesPlace = new Property("St. Charles Place", 140, 8, 40, 100, 300, 450, 600);
+        Property statesAvenue = new Property("States Avenue", 140, 10, 50, 150, 450, 625, 750);
+        Property virginiaAvenue = new Property("Virginia Avenue", 160, 10, 50, 150, 450, 625, 750);
+        Property stJamesPlace = new Property("St. James Place", 180, 12, 60, 180, 500, 700, 900);
+        Property tennesseeAvenue = new Property("Tennessee Avenue", 180, 12, 60, 180, 500, 700, 900);
+        Property newYorkAvenue = new Property("New York Avenue", 200, 14, 70, 200, 550, 750, 950);
+        Property kentuckyAvenue = new Property("Kentucky Avenue", 220, 14, 70, 200, 550, 750, 950);
+        Property indianaAvenue = new Property("Indiana Avenue", 220, 16, 80, 220, 600, 800, 1000);
+        Property illinoisAvenue = new Property("Illinois Avenue", 240, 20, 100, 300, 700, 875, 1050);
+        Property atlanticAvenue = new Property("Atlantic Avenue", 260, 22, 110, 330, 800, 975, 1150);
+        Property ventnorAvenue = new Property("Ventnor Avenue", 260, 22, 110, 330, 800, 975, 1150);
+        Property marvinGardens = new Property("Marvin Gardens", 280, 24, 120, 360, 850, 1025, 1200);
+        Property pacificAvenue = new Property("Pacific Avenue", 300, 26, 52, 130, 390, 900, 1100, 1275);
+        Property northCarolinaAvenue = new Property("North Carolina Avenue", 300, 26, 130, 390, 900, 1100, 1275);
+        Property pennsylvaniaAvenue = new Property("Pennsylvania Avenue", 320, 28, 150, 450, 1000, 1200, 1400);
+        Property parkPlace = new Property("Park Place", 350, 35, 175, 500, 1100, 1300, 1500);
+        Property boardwalk = new Property("Boardwalk", 400, 50, 200, 600, 1400, 1700, 2000); */
+
+        Player player1 = new Player("Player 1");
+        Player player2 = new Player("Player 2");
+        player1.roll(3, 4);
+ 
+
+    }
+}
+
