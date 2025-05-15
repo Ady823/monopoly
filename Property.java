@@ -3,9 +3,8 @@ public class Property {
     String name;
     int price;
     int location;
-
-    ArrayList<Integer> rents = new ArrayList<Integer>();
     
+    ArrayList<Integer> rents = new ArrayList<Integer>();
     Player owner;
     boolean isMortgaged;
 

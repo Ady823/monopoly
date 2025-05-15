@@ -19,7 +19,7 @@ public class Utility extends Property{
                 rent = 4 * owner.getLocation();
             } else if (numUtilities == 2) {
                 rent = 10 * owner.getLocation();
-            }
+            } 
         }
         return rent;
     }
