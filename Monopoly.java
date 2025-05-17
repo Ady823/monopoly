@@ -1,6 +1,10 @@
+import java.util.ArrayList;
+
 public class Monopoly{
     public static void main(String [] args) {
-        System.out.println("hi");
+
+        public static ArrayList<Property> properties = new ArrayList<Property>();
+
 
         Property mediterraneanAvenue = new Property("Mediterranean Avenue", 60, 2, 1, 4, 10, 30, 90, 160, 250); 
         Property balticAvenue = new Property("Baltic Avenue", 60, 4, 4, 8, 20, 60, 180, 320, 450);
@@ -16,7 +20,7 @@ public class Monopoly{
         Property statesAvenue = new Property("States Avenue", 140, 14, 10, 20, 50, 150, 450, 625, 750);
         Property virginiaAvenue = new Property("Virginia Avenue", 160, 15, 12, 24, 60, 180, 500, 700, 900);
         /* 
-        
+
         Property stJamesPlace = new Property("St. James Place", 180, 12, 60, 180, 500, 700, 900);
         Property tennesseeAvenue = new Property("Tennessee Avenue", 180, 12, 60, 180, 500, 700, 900);
         Property newYorkAvenue = new Property("New York Avenue", 200, 14, 70, 200, 550, 750, 950);
@@ -36,7 +40,11 @@ public class Monopoly{
         Player player1 = new Player("Player 1");
         Player player2 = new Player("Player 2");
         player1.roll(); 
- 
+        player2.roll();
+        player1.buy();
+        player1.roll();
+        
+        
     }
 }
 

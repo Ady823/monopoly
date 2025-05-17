@@ -1,11 +1,10 @@
 public class Utility extends Property{
     
-    public Utility(String name, int price, int location) {
-        super(name, price, location);
+    public Utility(String name, int price) {
+        super(name, price);
         
     }
 
-    //TODO: implement getRent method 
     public int getRent() {
         int rent = 0;
         if (owner != null) {

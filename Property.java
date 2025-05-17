@@ -3,6 +3,7 @@ public class Property {
     String name;
     int price;
     int location;
+    ArrayList<Property> properties = new ArrayList<Property>();
     
     ArrayList<Integer> rents = new ArrayList<Integer>();
     Player owner;
@@ -11,17 +12,17 @@ public class Property {
     public Property() {
 
     }
-    public Property(String name, int price, ArrayList<Integer> rents) {
+
+    public Property(String name, int price) {
         this.name = name;
         this.price = price;
-        this.rents = rents;
-    }
-
-    public Property(String name, int price, int location) {
+        properties.add(this);
+        Monopoly.properties.add(this);
         
     }
 
-    public Property(String name, int price, int location, int rent1, int rent2, int rent3, int rent4) {
+
+    public Property(String name, int price, int location, int rent1, int rent2, int rent3, int rent4, int rent5, int rent6, int rent7) {
         this.name = name;
         this.price = price;
         this.location = location;
@@ -29,24 +30,10 @@ public class Property {
         this.rents.add(rent2);
         this.rents.add(rent3);
         this.rents.add(rent4);
-    }
-    
-    public Property(String name, int price, int location, int rent1, int rent2, int rent3, int rent4, int rent5, int rent6, int rent7) {
-        this.name = name;
-        this.price = price;
-        this. location = location;
-        this.rents.add(rent1);
-        this.rents.add(rent2);
-        this.rents.add(rent3);
-        this.rents.add(rent4);
         this.rents.add(rent5);
         this.rents.add(rent6);
         this.rents.add(rent7);
-    }
-
-    public Property(String name, int price) {
-        this.name = name;
-        this.price = price;
+        properties.add(this);
     }
 
     public void setOwner(Player owner) {

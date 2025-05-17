@@ -1,7 +1,7 @@
 
 public class Railroad extends Property{
     public Railroad(String name, int price, int location) {
-        super(name, price, location, 25, 50, 100, 200);
+      //  super(name, price, location, 25, 50, 100, 200);
 
     }
 
