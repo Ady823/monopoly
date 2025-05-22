@@ -17,9 +17,9 @@ public class Player {
         this.name = name;
     }
 
-    //limiting roll so it doesn't exceed 4
+
     public void roll() {
-        this.location += 1 + Math.random() * 4;
+        this.location += 1 + Math.random() * 6 + Math.random() * 6; // Simulate rolling two dice
         if (this.location > Monopoly.properties.size() - 1) {
             this.location -= Monopoly.properties.size();
             this.passGo();

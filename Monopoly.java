@@ -21,24 +21,25 @@ public class Monopoly{
         Property stCharlesPlace = new Property("St. Charles Place", 140, 12, 10, 20, 50, 150, 450, 625, 750); 
         Property statesAvenue = new Property("States Avenue", 140, 14, 10, 20, 50, 150, 450, 625, 750);
         Property virginiaAvenue = new Property("Virginia Avenue", 160, 15, 12, 24, 60, 180, 500, 700, 900);
-        /* 
+        Property stJamesPlace = new Property("St. James Place", 180, 12, 14, 28, 70, 200, 550, 750, 950);
+        Property tennesseeAvenue = new Property("Tennessee Avenue", 180, 18, 14, 28, 70, 200, 550, 750, 950);
+        Property newYorkAvenue = new Property("New York Avenue", 200, 19, 16, 32, 80, 220, 600, 800, 1000);
+        Property kentuckyAvenue = new Property("Kentucky Avenue", 220, 21, 18, 36, 90, 250, 700, 875, 1050);
+        Property indianaAvenue = new Property("Indiana Avenue", 220, 23, 18, 36, 90, 250, 700, 875, 1050);
+        Property illinoisAvenue = new Property("Illinois Avenue", 240, 24, 20, 40, 100, 300, 750, 925, 1100);
+        Property atlanticAvenue = new Property("Atlantic Avenue", 260, 26, 22, 44, 110, 330, 800, 975, 1150);
+        Property ventnorAvenue = new Property("Ventnor Avenue", 260, 27, 22, 44, 110, 330, 800, 975, 1150);
+        Property marvinGardens = new Property("Marvin Gardens", 280, 29, 24, 48, 120, 360, 850, 1025, 1200);
+        Property pacificAvenue = new Property("Pacific Avenue", 300, 31, 26, 52, 130, 390, 900, 1100, 1275);
+        Property northCarolinaAvenue = new Property("North Carolina Avenue", 300, 32, 26, 52, 130, 390, 900, 1100, 1275);
+        Property pennsylvaniaAvenue = new Property("Pennsylvania Avenue", 320, 34, 28, 56, 150, 450, 1000, 1200, 1400);
+        Property parkPlace = new Property("Park Place", 350, 37, 35, 70, 175, 500, 1100, 1300, 1500);
+        Property boardwalk = new Property("Boardwalk", 400, 39, 50, 100, 200, 600, 1400, 1700, 2000);
 
- 
-        Property stJamesPlace = new Property("St. James Place", 180, 12, 60, 180, 500, 700, 900);
-        Property tennesseeAvenue = new Property("Tennessee Avenue", 180, 12, 60, 180, 500, 700, 900);
-        Property newYorkAvenue = new Property("New York Avenue", 200, 14, 70, 200, 550, 750, 950);
-        Property kentuckyAvenue = new Property("Kentucky Avenue", 220, 14, 70, 200, 550, 750, 950);
-        Property indianaAvenue = new Property("Indiana Avenue", 220, 16, 80, 220, 600, 800, 1000);
-        Property illinoisAvenue = new Property("Illinois Avenue", 240, 20, 100, 300, 700, 875, 1050);
-        Property atlanticAvenue = new Property("Atlantic Avenue", 260, 22, 110, 330, 800, 975, 1150);
-        Property ventnorAvenue = new Property("Ventnor Avenue", 260, 22, 110, 330, 800, 975, 1150);
-        Property marvinGardens = new Property("Marvin Gardens", 280, 24, 120, 360, 850, 1025, 1200);
-        Property pacificAvenue = new Property("Pacific Avenue", 300, 26, 52, 130, 390, 900, 1100, 1275);
-        Property northCarolinaAvenue = new Property("North Carolina Avenue", 300, 26, 130, 390, 900, 1100, 1275);
-        Property pennsylvaniaAvenue = new Property("Pennsylvania Avenue", 320, 28, 150, 450, 1000, 1200, 1400);
-        Property parkPlace = new Property("Park Place", 350, 35, 175, 500, 1100, 1300, 1500);
-        Property boardwalk = new Property("Boardwalk", 400, 50, 200, 600, 1400, 1700, 2000); 
-        */ 
+
+
+
+
 
         Player player1 = new Player("Player 1");
         Player player2 = new Player("Player 2");
