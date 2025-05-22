@@ -1,10 +1,12 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Monopoly{
+    public static ArrayList<Property> properties = new ArrayList<Property>();
+
     public static void main(String [] args) {
-
-        public static ArrayList<Property> properties = new ArrayList<Property>();
-
+        properties.add(new Property("Go", 0));
+        Scanner scanner = new Scanner(System.in);
 
         Property mediterraneanAvenue = new Property("Mediterranean Avenue", 60, 2, 1, 4, 10, 30, 90, 160, 250); 
         Property balticAvenue = new Property("Baltic Avenue", 60, 4, 4, 8, 20, 60, 180, 320, 450);
@@ -21,6 +23,7 @@ public class Monopoly{
         Property virginiaAvenue = new Property("Virginia Avenue", 160, 15, 12, 24, 60, 180, 500, 700, 900);
         /* 
 
+
         Property stJamesPlace = new Property("St. James Place", 180, 12, 60, 180, 500, 700, 900);
         Property tennesseeAvenue = new Property("Tennessee Avenue", 180, 12, 60, 180, 500, 700, 900);
         Property newYorkAvenue = new Property("New York Avenue", 200, 14, 70, 200, 550, 750, 950);
@@ -32,19 +35,32 @@ public class Monopoly{
         Property marvinGardens = new Property("Marvin Gardens", 280, 24, 120, 360, 850, 1025, 1200);
         Property pacificAvenue = new Property("Pacific Avenue", 300, 26, 52, 130, 390, 900, 1100, 1275);
         Property northCarolinaAvenue = new Property("North Carolina Avenue", 300, 26, 130, 390, 900, 1100, 1275);
-        Property pennsylvaniaAvenue = new Property("Pennsylvania Avenue", 320, 28, 150, 450, 1000, 1200, 1400);
+        Property pennsylvaniaAvenue = new Proper'[ty("Pennsylvania Avenue", 320, 28, 150, 450, 1000, 1200, 1400);
         Property parkPlace = new Property("Park Place", 350, 35, 175, 500, 1100, 1300, 1500);
         Property boardwalk = new Property("Boardwalk", 400, 50, 200, 600, 1400, 1700, 2000); 
         */ 
 
         Player player1 = new Player("Player 1");
         Player player2 = new Player("Player 2");
-        player1.roll(); 
-        player2.roll();
-        player1.buy();
-        player1.roll();
-        
-        
+
+        Player currentPlayer = player1;
+        while(true){
+            System.out.println(currentPlayer.name + ", enter 'roll' to roll or 'buy' to buy the property at your location:");
+            String input = scanner.nextLine();
+
+            if (input.equalsIgnoreCase("roll")) {
+             currentPlayer.roll();
+            } else if (input.equalsIgnoreCase("buy")) {
+             currentPlayer.buy(properties.get(currentPlayer.location));
+            }
+
+             // Switch to the other player for the next turn
+            if (currentPlayer == player1) {
+                  currentPlayer = player2;
+            } else {
+                 currentPlayer = player1;
+            }
+        }
     }
 }
 

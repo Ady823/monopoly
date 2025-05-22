@@ -19,43 +19,39 @@ public class Player {
 
     public void roll() {
         this.location += Math.random() * 6 + 1 + (Math.random() * 6 + 1);
-        if (this.location > 39) {
-            this.location -= 40;
-            this.money += 200;
-        }
-        if (this.location > 39) {
-            this.location -= 40;
+        if (this.location > Monopoly.properties.size() - 1) {
+            this.location -= Monopoly.properties.size();
             this.passGo();
         }
+
         System.out.println(this.name + " rolled and moved to " + this.location);
         System.out.println(this.name + " has $" + this.money);
-
+        checkBankruptcy();
         
     }
 
-    public void buy() {
-        // Validate location to ensure it's within bounds
-        if (this.location >= 0 && this.location < Monopoly.properties.size()) {
-            // Get the property at the player's current location
-            Property property = Monopoly.properties.get(this.location);
-    
-            // Check if the property is available for purchase
-            if (property.getOwner() == null) {
-                if (this.money >= property.getPrice()) {
-                    this.money -= property.getPrice();
-                    this.properties.add(property);
-                    property.setOwner(this);
-                    System.out.println(this.name + " bought " + property.getName());
-                } else {
-                    System.out.println("Not enough money to buy " + property.getName());
-                }
-            } else {
-                System.out.println(property.getName() + " is already owned by " + property.getOwner().getName());
-            }
-        } else {
-            System.out.println("Invalid location: " + this.location);
-        }
+public void buy(Property property) {
+        if (this.location == 0) {
+        System.out.println("You cannot buy 'Go'.");
+        return;
     }
+    if (this.location != property.location) {
+        System.out.println("You must be at " + property.getName() + " to buy it.");
+        return;
+    }
+    if (property.getOwner() == null) {
+        if (this.money >= property.getPrice()) {
+            this.money -= property.getPrice();
+            this.properties.add(property);
+            property.setOwner(this);
+            System.out.println(this.name + " bought " + property.getName());
+        } else {
+            System.out.println("Not enough money to buy " + property.getName());
+        }
+    } else {
+        System.out.println(property.getName() + " is already owned by " + property.getOwner().getName());
+    }
+}
 
     public void sell(Property property) {
         if (this.properties.contains(property)) {
@@ -87,5 +83,12 @@ public class Player {
     public ArrayList<Property> getProperties() {
         return this.properties;
     }
+
+    public void checkBankruptcy() {
+    if (this.money <= 0) {
+        System.out.println(this.name + " is bankrupt! Game over.");
+        System.exit(0);
+    }
+}
     
 }
