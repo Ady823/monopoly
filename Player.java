@@ -17,9 +17,9 @@ public class Player {
         this.name = name;
     }
 
-    //rolling two dice to move player to a new location
+    //limiting roll so it doesn't exceed 4
     public void roll() {
-        this.location += Math.random() * 6 + 1 + (Math.random() * 6 + 1);
+        this.location += Math.random() * 4;
         if (this.location > Monopoly.properties.size() - 1) {
             this.location -= Monopoly.properties.size();
             this.passGo();
@@ -28,7 +28,7 @@ public class Player {
         System.out.println(this.name + " rolled and moved to " + Monopoly.properties.get(this.location).getName());
         System.out.println(this.name + " has $" + this.money);
         checkBankruptcy();
-        
+        payRent(this.getProperties().get(this.location));
     }
 
 public void buy(Property property) {
@@ -89,6 +89,22 @@ public void buy(Property property) {
     if (this.money <= 0) {
         System.out.println(this.name + " is bankrupt! Game over.");
         System.exit(0);
+    }
+}
+    public void payRent(Property property) {
+    if (property.getOwner() != null && property.getOwner() != this) {
+        int rent = property.getRent();
+        if (this.money >= rent) {
+            this.money -= rent;
+            property.getOwner().money += rent;
+            System.out.println(this.name + " paid $" + rent + " rent to " + property.getOwner().getName());
+        } else {
+            // Not enough money to pay rent
+            property.getOwner().money += this.money;
+            System.out.println(this.name + " paid $" + this.money + " rent to " + property.getOwner().getName() + " and is now bankrupt!");
+            this.money = 0;
+            checkBankruptcy();
+        }
     }
 }
     
