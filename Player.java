@@ -17,6 +17,7 @@ public class Player {
         this.name = name;
     }
 
+    //rolling two dice to move player to a new location
     public void roll() {
         this.location += Math.random() * 6 + 1 + (Math.random() * 6 + 1);
         if (this.location > Monopoly.properties.size() - 1) {
@@ -35,7 +36,7 @@ public void buy(Property property) {
         System.out.println("You cannot buy 'Go'.");
         return;
     }
-    
+
     if (property.getOwner() == null) {
         if (this.money >= property.getPrice()) {
             this.money -= property.getPrice();
@@ -48,8 +49,11 @@ public void buy(Property property) {
     } else {
         System.out.println(property.getName() + " is already owned by " + property.getOwner().getName());
     }
+            System.out.println(this.name + " has $" + this.money);
+            checkBankruptcy();
 }
 
+//selling a property owned by the current player
     public void sell(Property property) {
         if (this.properties.contains(property)) {
             this.money += property.getPrice();

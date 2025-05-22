@@ -52,8 +52,22 @@ public class Monopoly{
              currentPlayer.roll();
             } else if (input.equalsIgnoreCase("buy")) {
              currentPlayer.buy(properties.get(currentPlayer.location));
+            } else if (input.equalsIgnoreCase("sell")) {
+                System.out.println("Enter the name of the property you want to sell:");
+                String propertyName = scanner.nextLine();
+                Property propertyToSell = null;
+                for (Property property : currentPlayer.properties) {
+                    if (property.getName().equalsIgnoreCase(propertyName)) {
+                        propertyToSell = property;
+                        break;
+                    }
+                }
+                if (propertyToSell != null) {
+                    currentPlayer.sell(propertyToSell);
+                } else {
+                    System.out.println("You do not own that property.");
+                }
             }
-
              // Switch to the other player for the next turn
             if (currentPlayer == player1) {
                   currentPlayer = player2;
