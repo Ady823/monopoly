@@ -28,7 +28,7 @@ public class Player {
         System.out.println(this.name + " rolled and moved to " + Monopoly.properties.get(this.location).getName());
         System.out.println(this.name + " has $" + this.money);
         checkBankruptcy();
-        payRent(this.getProperties().get(this.location));
+        payRent(Monopoly.properties.get(this.location));
     }
 
 public void buy(Property property) {

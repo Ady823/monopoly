@@ -21,13 +21,6 @@ public class Monopoly{
         Property stCharlesPlace = new Property("St. Charles Place", 140, 12, 10, 20, 50, 150, 450, 625, 750); 
         Property statesAvenue = new Property("States Avenue", 140, 14, 10, 20, 50, 150, 450, 625, 750);
         Property virginiaAvenue = new Property("Virginia Avenue", 160, 15, 12, 24, 60, 180, 500, 700, 900);
-        properties.add(mediterraneanAvenue);
-        properties.add(balticAvenue);
-        properties.add(vermontAvenue);
-        properties.add(connecticutAvenue);
-        properties.add(stCharlesPlace);
-        properties.add(statesAvenue);
-        properties.add(virginiaAvenue);
         /* 
 
  
