@@ -72,6 +72,17 @@ public class Property {
     public boolean isMortgaged() {
         return this.isMortgaged;
     } 
+
+    public boolean addHouse() {
+    if (this.houses < 4) { // Monopoly: max 4 houses before hotel
+        this.houses++;
+        System.out.println("A house was added to " + this.name + ". Total houses: " + this.houses);
+        return true;
+    } else {
+        System.out.println(this.name + " already has 4 houses. Buy a hotel instead!");
+        return false;
+    }
+}
 }
 
 
