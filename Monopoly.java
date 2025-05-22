@@ -36,11 +36,6 @@ public class Monopoly{
         Property parkPlace = new Property("Park Place", 350, 37, 35, 70, 175, 500, 1100, 1300, 1500);
         Property boardwalk = new Property("Boardwalk", 400, 39, 50, 100, 200, 600, 1400, 1700, 2000);
 
-
-
-
-
-
         Player player1 = new Player("Player 1");
         Player player2 = new Player("Player 2");
 

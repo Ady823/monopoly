@@ -17,7 +17,6 @@ public class Player {
         this.name = name;
     }
 
-
     public void roll() {
         this.location += 1 + Math.random() * 6 + Math.random() * 6; // Simulate rolling two dice
         if (this.location > Monopoly.properties.size() - 1) {

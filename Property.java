@@ -3,21 +3,19 @@ public class Property {
     String name;
     int price;
     int location;
+    int houses = 0;
+    int hotels = 0;
 
-    
     ArrayList<Integer> rents = new ArrayList<Integer>();
     Player owner;
     boolean isMortgaged;
-
     public Property() {
-
     }
 
     public Property(String name, int price) {
         this.name = name;
         this.price = price;
         Monopoly.properties.add(this);
-        
     }
 
     public Property(String name, int price, int location, int rent1, int rent2, int rent3, int rent4, int rent5, int rent6, int rent7) {
@@ -37,6 +35,7 @@ public class Property {
     public void setOwner(Player owner) {
         this.owner = owner;
     }
+
     public Player getOwner() {
         return this.owner;
     }
@@ -73,7 +72,6 @@ public class Property {
     public boolean isMortgaged() {
         return this.isMortgaged;
     } 
-
 }
 
 
