@@ -24,7 +24,7 @@ public class Player {
             this.passGo();
         }
 
-        System.out.println(this.name + " rolled and moved to " + this.location);
+        System.out.println(this.name + " rolled and moved to " + Monopoly.properties.get(this.location).getName());
         System.out.println(this.name + " has $" + this.money);
         checkBankruptcy();
         
@@ -35,10 +35,7 @@ public void buy(Property property) {
         System.out.println("You cannot buy 'Go'.");
         return;
     }
-    if (this.location != property.location) {
-        System.out.println("You must be at " + property.getName() + " to buy it.");
-        return;
-    }
+    
     if (property.getOwner() == null) {
         if (this.money >= property.getPrice()) {
             this.money -= property.getPrice();

@@ -33,7 +33,7 @@ public class Property {
         this.rents.add(rent5);
         this.rents.add(rent6);
         this.rents.add(rent7);
-        properties.add(this);
+        Monopoly.properties.add(this);
     }
 
     public void setOwner(Player owner) {
