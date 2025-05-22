@@ -3,7 +3,7 @@ public class Property {
     String name;
     int price;
     int location;
-    ArrayList<Property> properties = new ArrayList<Property>();
+
     
     ArrayList<Integer> rents = new ArrayList<Integer>();
     Player owner;
@@ -16,11 +16,9 @@ public class Property {
     public Property(String name, int price) {
         this.name = name;
         this.price = price;
-        properties.add(this);
         Monopoly.properties.add(this);
         
     }
-
 
     public Property(String name, int price, int location, int rent1, int rent2, int rent3, int rent4, int rent5, int rent6, int rent7) {
         this.name = name;
@@ -33,7 +31,6 @@ public class Property {
         this.rents.add(rent5);
         this.rents.add(rent6);
         this.rents.add(rent7);
-        Monopoly.properties.add(this);
     }
 
     public void setOwner(Player owner) {

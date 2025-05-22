@@ -19,7 +19,7 @@ public class Player {
 
     //limiting roll so it doesn't exceed 4
     public void roll() {
-        this.location += Math.random() * 4;
+        this.location += 1 + Math.random() * 4;
         if (this.location > Monopoly.properties.size() - 1) {
             this.location -= Monopoly.properties.size();
             this.passGo();
