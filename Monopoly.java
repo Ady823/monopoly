@@ -30,7 +30,7 @@ public class Monopoly{
         properties.add(virginiaAvenue);
         /* 
 
-
+ 
         Property stJamesPlace = new Property("St. James Place", 180, 12, 60, 180, 500, 700, 900);
         Property tennesseeAvenue = new Property("Tennessee Avenue", 180, 12, 60, 180, 500, 700, 900);
         Property newYorkAvenue = new Property("New York Avenue", 200, 14, 70, 200, 550, 750, 950);
